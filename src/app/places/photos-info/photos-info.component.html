@@ -1,0 +1,7 @@
+<div class="photo__info">
+    <p class="photo__info__item">Photo-id: {{photoId}}</p>
+    <p class="photo__info__item">Photo-width: {{photo?.width}}px</p>
+    <p class="photo__info__item">Photo-height: {{photo?.height}}px</p>
+    <p class="photo__info__item">Photo-visibility: {{photo?.visibility}}</p>
+</div>
+<img class="img-responsive" [src]="loadImage()" alt=""/>

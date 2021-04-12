@@ -1,0 +1,61 @@
+<div class="container">
+  <header class="header">
+      <img src="../assets/img/Logo.png" alt="PhotoFinder logo" class="logo">
+
+      <nav class="user-nav">
+        <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+                <use xlink:href="../assets/symbol-defs.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">2</span>
+        </div>
+
+        <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+                <use xlink:href="../assets/symbol-defs.svg#icon-bubbles2"></use>
+            </svg>
+            <span class="user-nav__notification">10</span>
+        </div>
+        <div class="user-nav__user">
+            <img src="../assets/img/User.jpg" alt="user photo" class="user-nav__user-photo">
+            <span class="user-nav__user-name">Hello Greg!</span>
+        </div>
+    </nav>
+  </header>
+
+  <div class="content">
+    <nav class="sidebar">
+        <ul class="side-nav">
+            <li class="side-nav__item side-nav__item--active">
+                <a href="#" class="side-nav__link">
+                    <svg class="side-nav__icon">
+                        <use xlink:href="../assets/symbol-defs.svg#icon-earth"></use>
+                    </svg>
+                    <span>Places</span>
+                </a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <svg class="side-nav__icon">
+                        <use xlink:href="../assets/symbol-defs.svg#icon-map2"></use>
+                    </svg>
+                    <span>Map</span>
+                </a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <svg class="side-nav__icon">
+                        <use xlink:href="../assets/symbol-defs.svg#icon-images"></use>
+                    </svg>
+                    <span>Images</span>
+                </a>
+            </li>
+        </ul>
+        <div class="legal">
+            &copy; 2021 by PhotoFinder. All rights reserved.
+        </div>
+    </nav>
+
+    <div class="router-content card ">
+      <router-outlet></router-outlet>
+    </div>

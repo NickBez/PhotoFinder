@@ -1,0 +1,16 @@
+    <h4 class="place-photo-h4">{{place?.name}}</h4>
+
+    <div class="place-photo-gallery" *ngFor="let photo of photos" >
+        <img class="img-responsive" [src]="loadImage(photo)" alt="" (click)="goToPhoto(photo)" (error)="imageError($event)"/>
+    </div>
+
+    <h4 class="no-images" *ngIf="photos?.length === 0">No images available</h4>
+
+    <p>Address:</p>
+    <p *ngFor="let address of place?.location?.formattedAddress">{{address}}</p>
+    <p>City: {{place?.location?.city}}</p>
+    <p>State: {{place?.location?.state}}</p>
+    <p>Country: {{place?.location?.country}}</p>
+    <p>Postal Code: {{place?.location?.postalCode}}</p>
+    <p>Latitude: {{place?.location?.lat}}</p>
+    <p>Longitude: {{place?.location?.lng}}</p>

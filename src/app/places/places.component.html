@@ -1,0 +1,14 @@
+
+<div class="search">
+    <input #search type="text" class="search__input" placeholder="Search places" (keyup.enter)="searchPlaces(search?.value)">
+    <button class="search__button" (click)="searchPlaces(search?.value)">
+        <svg class="search__icon">
+            <use xlink:href="../assets/symbol-defs.svg#icon-search"></use>
+        </svg>
+    </button> 
+</div>
+<div class="search__results">
+    <ul class="list">
+        <li class="list__item" *ngFor="let place of places" (click)="goToPlace(place?.id)">{{ place.name }} ({{ place.id }})</li>
+    </ul>
+</div>

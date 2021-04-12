@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import "styles/base";
+@import "styles/layout";
+
+//Make images responsive app wide
+.img-responsive {
+    object-fit: cover;
+    object-position: center;
+    max-width: 250px;
+    cursor: pointer;
+    box-shadow: 0 1.5rem 1.5rem rgb(0 0 0 / 50%);
+}

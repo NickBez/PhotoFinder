@@ -1,0 +1,109 @@
+@import "../../styles/base";
+@import "../../styles/layout";
+
+//Set width search bar to 100%
+:host {
+    width: 100%;
+}
+////////////////////////////////////////
+// SEARCH
+.search {
+    flex: 0 0 40%;
+  
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  
+    @media only screen and (max-width: $bp-smallest) {
+        flex: 0 0 100%;
+        background-color: var(--color-Grey-light-2);
+    }
+  
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-Grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 50%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+  
+        &:focus {
+            outline: none;
+            background-color: var(--color-Grey-light-3);
+        }
+  
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+  
+    &__input:focus + &__button {
+        background-color: var(--color-Grey-light-3);
+    }
+  
+    &__button {
+        border: none;
+        background-color: var(--color-Grey-light-2);
+        margin-top: 0.4rem;
+        cursor: pointer;
+  
+        &:focus {
+            outline: none;
+        }
+  
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+  
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-Grey-dark-3);
+    }
+  }
+
+  ////////////////////////////////////////
+// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0 3rem 7rem;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: 1.2rem;
+        cursor: pointer;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 1rem;
+
+        background-image: url(../../assets/img/location.svg);
+        background-size: cover;
+
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../../assets/img/location.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../../assets/img/location.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+        
+    }
+}
